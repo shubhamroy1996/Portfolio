@@ -25,6 +25,4 @@ import visualstudiocode from './visualstudiocode.svg'
 import vitejs from './vitejs.svg'
 import wordpress from './wordpress.svg'
 
-
-
 export { auth0, azure, blazor,blazorPink,cplusplus,csharpPink, csharp,css3,dotnet,dotnetPink,dotnetcore,efcore,react,git,github,html5,javscript,microsoft,microsoftsqlserver,sqlite,stripe,tailwindcss,threejs,visualstudiocode,vitejs,wordpress};
