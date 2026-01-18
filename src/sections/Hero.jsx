@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import frontImage from "../assets/socials/shubham.jpg";
+import frontImage from "../assets/socials/frontimg.jpg";
 import HeroText from "../components/HeroText";
 import { FlipWords } from "../components/FlipWords";
 import ParallaxBackground from "../components/parallaxBackground";
