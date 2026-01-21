@@ -248,21 +248,20 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Security & Defense Projects",
-    date: "2021-2023",
+    title: "Software Engineer Analyst",
+    job: "Insurance Domain",
+    date: "2019-2022",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
-      "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
+      "✅ Built end-to-end test automation for a React web app using CodeceptJS and TypeScript, covering complex insurance workflows (quoting, claims).",
+      "✅ Authored 300+ BDD/TDD Gherkin scenarios, improving requirement traceability and business–engineering collaboration",
+      "✅ Led automation framework migration to TypeScript, introducing type-safe interfaces adopted by 15+ cross-functional teams",
+      "✅ Developed scalable RESTful APIs with Node.js and Express to support high-volume data exchange between underwriting engines and UI."
     ],
   },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    date: "2023-2024",
+    title: "Software Eng Sr. Analyst",
+    job: "Demand & Supply Chain Domain",
+    date: "2022-2025",
     contents: [
       "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
       "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
