@@ -39,7 +39,7 @@ const Contact = () => {
           to_email: "shubham.roy1996.sr@gmail.com",
           message: formData.message,
         },
-        "pn-Bw_mS1_QQdofuV"
+        "pn-Bw_mS1_QQdofuV",
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
@@ -47,7 +47,7 @@ const Contact = () => {
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
+      showAlertMessage("Oops", "Somthing went wrong!");
     }
   };
   return (
@@ -102,7 +102,10 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5 pointer-events-auto">
-            <label htmlFor="message" className="feild-label pointer-events-auto">
+            <label
+              htmlFor="message"
+              className="feild-label pointer-events-auto"
+            >
               Message
             </label>
             <textarea
