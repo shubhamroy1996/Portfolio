@@ -20,7 +20,7 @@ const ProjectDetails = ({
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500 pointer-events-auto"
+          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500 cursor-pointer pointer-events-auto"
         >
           <img src={close} className="w-6 h-6" />
         </button>
