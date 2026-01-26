@@ -21,7 +21,7 @@ const About = () => {
           />
           <div className="z-10">
             <p className="headtext">Hi, I'm Shubham Kumar</p>
-            <p className="subtext">
+            <p className="subtext text-white" >
               With 5+ years of experience, I specialize in building scalable, high-performance web applications using the React ecosystem. Leveraging tools like Redux and TanStack, I optimize data flow for efficient, production-ready solutions. I focus on creating maintainable systems that align with business goals and foster cross-functional collaboration for long-term success.
             </p>
           </div>

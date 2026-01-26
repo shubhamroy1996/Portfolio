@@ -43,14 +43,14 @@ export const myProjects = [
   },
   {
     id: 2,
-    title: "Authentication & Authorization System",
+    title: "Tourvisto",
     description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
+      "Dynamic travel dashboard for planning Trip using integrated Gemini AI",
     subDescription: [
       "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
       "Implemented role-based access control (RBAC) for fine-grained user permissions.",
       "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+      "Connected to a secure appwrite database for user data storage.",
     ],
     href: "",
     logo: "",
