@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { ChevronDown } from "lucide-react";
-import frontImage from "../assets/socials/shubham.jpg";
+import frontImage from "../assets/socials/shubham.webp";
 import { FlipWords } from "../components/FlipWords";
 
 // BlurText animation component
@@ -72,12 +72,12 @@ export default function Hero() {
     document.documentElement.classList.add("dark");
   }, []);
 
-  const scrollToAbout = () => {
+  const scrollToAbout = useMemo(() => {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  };
+  },[])
 
   const toggleTheme = () => {
     const newTheme = !isDark;

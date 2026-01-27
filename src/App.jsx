@@ -1,12 +1,13 @@
-import React from "react";
-import Navbar from "./sections/Navbar"
+import React, { lazy, Suspense } from "react";
+import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Experiences from "./sections/Experiences";
-import Testimonial from "./sections/Testimonial";
-import Contact from "./sections/Contact";
-import Footer from './sections/Footer';
+const Projects = lazy(() => import("./sections/Projects"));
+const Experiences = lazy(() => import("./sections/Experiences"));
+const Testimonial = lazy(() => import("./sections/Testimonial"));
+const Contact = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./sections/Footer"));
+import { Loader2 } from "lucide-react";
 
 const App = () => {
   return (
@@ -18,11 +19,13 @@ const App = () => {
       />
       <Hero />
       <About />
-      <Projects />
-      <Experiences />
-      <Testimonial />
-      <Contact />
-      <Footer/>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Projects />
+        <Experiences />
+        <Testimonial />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 };

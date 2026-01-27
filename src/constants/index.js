@@ -8,12 +8,10 @@ export const myProjects = [
     id: 1,
     title: "Swiggy Clone",
     description:
-      "This project is a comprehensive config-driven UI project focused on replicating the core features of the Swiggy food delivery platform.",
+      "Its a comprehensive config-driven UI project focused on replicating the core features of the Swiggy food delivery platform.",
     subDescription: [
       "Built using React.js, Redux, Tailwind CSS, and Webpack, the application leverages the Swiggy API to dynamically display restaurant",
       "Listings and menus based on the searched location, providing a realistic user experience.",
-      "Implemented secure authentication and database management",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
     ],
     href: "https://swiggy-clone-git-main-shubhamroy1996s-projects.vercel.app/",
     logo: "",
@@ -24,20 +22,20 @@ export const myProjects = [
         name: "React",
         path: Logos.react,
       },
-      {
-        id: 2,
-        name: "Redux",
-        path: "/assets/logos/dotnet.svg",
-      },
+      // {
+      //   id: 2,
+      //   name: "Redux",
+      //   path: Logos.
+      // },
       {
         id: 3,
         name: "TailwindCSS",
-        path: "/assets/logos/efcore.png",
+        path: Logos.tailwindcss
       },
       {
         id: 4,
         name: "Vite",
-        path: "/assets/logos/tailwindcss.svg",
+        path: Logos.vitejs
       },
     ],
   },
@@ -45,21 +43,19 @@ export const myProjects = [
     id: 2,
     title: "Tourvisto",
     description:
-      "Dynamic travel dashboard for planning Trip using integrated Gemini AI",
+      "Travel platform with Admin Dashboard using React Router & TypeScript with AI itineraries.",
     subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure appwrite database for user data storage.",
+      "Integrates Gemini AI to transform user preferences into detailed travel plans in seconds.",
+      "Developed with TypeScript to ensure reliable data flow across complex dashboard widgets and user states.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: Project.tourvisto,
     tags: [
       {
         id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
+        name: "Typescript",
+        path: Logos.typescript,
       },
       {
         id: 2,
