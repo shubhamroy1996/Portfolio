@@ -3,6 +3,7 @@ import ProjectDetails from "./ProjectDetails";
 import arrowRight from "../assets/arrow-right.svg"
 
 const Project = ({
+  id,
   title,
   description,
   subDescription,
@@ -38,6 +39,7 @@ const Project = ({
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
       {isHidden && (
         <ProjectDetails
+          key={id}
           title={title}
           description={description}
           subDescription={subDescription}

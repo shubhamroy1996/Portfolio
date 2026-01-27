@@ -22,11 +22,11 @@ export const myProjects = [
         name: "React",
         path: Logos.react,
       },
-      // {
-      //   id: 2,
-      //   name: "Redux",
-      //   path: Logos.
-      // },
+      {
+        id: 2,
+        name: "Redux",
+        path: Logos.redux
+      },
       {
         id: 3,
         name: "TailwindCSS",
@@ -60,7 +60,7 @@ export const myProjects = [
       {
         id: 2,
         name: "React",
-        path: "/assets/logos/react.svg",
+        path: Logos.react
       },
       {
         id: 3,
@@ -70,7 +70,7 @@ export const myProjects = [
       {
         id: 4,
         name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        path: Logos.tailwindcss
       },
     ],
   },
@@ -113,11 +113,11 @@ export const myProjects = [
   },
   {
     id: 4,
-    title: "C++ Game Engine",
+    title: "Netflix-GPT",
     description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
+      "-----------------------------------------------.",
     subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
+      "WILL ADD LATERON",
       "Developed a physics engine with collision detection and particle effects.",
       "Implemented a scripting system for easy game customization.",
       "Optimized performance with multi-threading and efficient memory management.",

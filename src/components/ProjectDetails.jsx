@@ -3,6 +3,7 @@ import arrowUpImage from '../assets/arrow-up.svg'
 import close from "../assets/close.svg"
 
 const ProjectDetails = ({
+  id,
   title,
   description,
   subDescription,
@@ -12,7 +13,7 @@ const ProjectDetails = ({
   closeModal,
 }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm pointer-events-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm pointer-events-auto" key={id}>
       <motion.div
         className="relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10 pointer-events-auto"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -42,9 +43,10 @@ const ProjectDetails = ({
                 />
               ))}
             </div>
-            <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
+            <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation" href={href} target="_blank"
+                rel="noopener noreferrer">
               View Project{" "}
-              <img src={arrowUpImage} className="size-4" href={href} />
+              <img src={arrowUpImage} className="size-4" />
             </a>
           </div>
         </div>
