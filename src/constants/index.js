@@ -259,20 +259,22 @@ export const experiences = [
     job: "Demand & Supply Chain Domain",
     date: "2022-2025",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
+      "✅Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
+      "✅ Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
       "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
       "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
       "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
     ],
   },
   {
-    title: "Freelance Developer",
-    job: "Self-Employed",
+    title: "Software Eng 1",
+    job: "Audit-Tax Domain",
     date: "2025-Present",
     contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "✅ Engineered core features for a large-scale Audit Management platform", 
+      "✅ Developed TypeScript modules to fetch and render 3-5 years of historical audit data via REST APIs.",
+      "✅ Deployed AI-driven validation tools that identify reporting errors and omissions in real-time", 
+      "✅ Utilize MongoDB for data persistence and Datadog to monitor feature performance and reliability.",
     ],
   },
 ];

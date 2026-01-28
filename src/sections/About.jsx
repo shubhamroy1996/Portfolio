@@ -226,6 +226,7 @@ const About = () => {
                   "GraphQL",
                   "Redux",
                   "TanStack",
+                  "mongoDB"
                 ].map((tech) => (
                   <span
                     key={tech}
