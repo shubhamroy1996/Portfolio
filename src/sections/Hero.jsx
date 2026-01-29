@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { ChevronDown } from "lucide-react";
-import frontImage from "../assets/socials/shubham.webp";
+import frontImage from "../assets/socials/frontImage.webp";
 import { FlipWords } from "../components/FlipWords";
 
 // BlurText animation component
