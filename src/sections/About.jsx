@@ -2,8 +2,7 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import { Frameworks } from "../components/FrameWorks";
-// import aboutImage from "../assets/coding-pov.png";
+import FrameWorks from '../components/Frameworks'
 import aboutImage from "../assets/coding-pov5.jpg";
 
 import * as logos from "../assets/logos/index";
@@ -244,7 +243,7 @@ const About = () => {
             </div>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            <Frameworks />
+            <FrameWorks />
           </div>
         </div>
       </div>

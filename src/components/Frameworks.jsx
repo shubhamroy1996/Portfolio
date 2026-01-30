@@ -1,7 +1,7 @@
 import { OrbitingCircles } from "./OrbitingCircles";
 import * as logos from "../assets/logos/index";
 
-export function Frameworks() {
+function FrameWorks() {
   const skills = [
     "react",
     "javascript",
@@ -38,3 +38,5 @@ export function Frameworks() {
 const Icon = ({ src }) => (
   <img src={src} className="duration-150 rounded-sm hover:scale-110" />
 );
+
+export default FrameWorks

@@ -228,17 +228,18 @@ export const myProjects = [
 export const mySocials = [
   {
     name: "WhatsApp",
-    href: "",
-    icon: Icons.whatsApp
+    href: import.meta.env.VITE_WHATSAPP_LINK,
+    icon: Icons.whatsApp,
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/shubham-kumar-096630159/",
+    href: import.meta.env.VITE_LINKEDIN_ID,
     icon: Icons.linkedin,
   },
   {
-    name: "Instagram",
-    icon: Icons.instagram
+    name: "Gmail",
+    href: import.meta.env.VITE_EMAIL_ID,
+    icon: Icons.gmail
   },
 ];
 
