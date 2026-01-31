@@ -2,6 +2,9 @@
 
 A modern, interactive personal portfolio website built with React and cutting-edge web technologies. Features smooth animations, 3D elements, and a professional contact form integrated with EmailJS.
 
+<img width="1286" height="632" alt="image" src="https://github.com/user-attachments/assets/b044976a-b5eb-4dbe-b997-546f00ba2ecc" />
+
+
 ---
 
 ## 📋 Table of Contents
