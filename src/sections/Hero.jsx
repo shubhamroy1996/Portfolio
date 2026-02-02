@@ -118,7 +118,7 @@ export default function Hero() {
 
       {/* Hero Section */}
       <main className="relative min-h-screen flex flex-col">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4" data-testid='#name-shubham'>
           <div className="relative text-center">
             <BlurText
               text='Shubham'
