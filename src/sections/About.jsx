@@ -148,7 +148,7 @@ const About = () => {
           </figure>
         </div>
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4">
+        <div className="grid-special-color grid-4" id="#about-grid-4" data-testid='#about-grid-4'>
           <div className="flex flex-col items-center justify-center gap-4 size-full">
             <p className="text-center headtext">
               Want to get in touch? Let's build something great together!
@@ -160,6 +160,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+                data-testid='github_btn'
               >
                 Github
                 <svg

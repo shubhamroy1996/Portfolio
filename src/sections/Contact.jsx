@@ -70,7 +70,7 @@ const Contact = () => {
             platform, or bring a unique project to life, I'm here to help
           </p>
         </div>
-        <form className="w-full pointer-events-auto" onSubmit={handleSubmit}>
+        <form className="w-full pointer-events-auto" onSubmit={handleSubmit} data-testid='contact-form'>
           <div className="mb-5 pointer-events-auto">
             <label htmlFor="name" className="feild-label pointer-events-auto">
               Full Name
