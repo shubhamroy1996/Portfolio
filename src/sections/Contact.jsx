@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+import { useTheme } from "../contexts/ThemeContext";
 
 emailjs.init("pn-Bw_mS1_QQdofuV");
 
 const Contact = () => {
+  const { isDark } = useTheme();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,19 +55,19 @@ const Contact = () => {
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section className="relative flex items-center c-space section-spacing transition-colors duration-300" id="contact" style={{ backgroundColor: isDark ? "#030412" : "#f8f8f8", color: isDark ? "#ffffff" : "#1a1a1a" }}>
       <Particles
         className="absolute inset-0 -z-50 pointer-events-none"
         quantity={100}
         ease={80}
-        color={"#ffffff"}
+        color={isDark ? "#ffffff" : "#1a1a1a"}
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="relative z-10 flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary pointer-events-auto">
+      <div className="relative z-10 flex flex-col items-center justify-center max-w-md p-5 mx-auto border rounded-2xl pointer-events-auto transition-colors duration-300" style={{ borderColor: isDark ? "rgba(255,255,255,0.1)" : "rgba(26,26,26,0.1)", backgroundColor: isDark ? "#030412" : "#f8f8f8" }}>
         <div className="flex flex-col items-start w-full gap-5 mb-10 pointer-events-auto">
-          <h2 className="text-heading">Let's Talk</h2>
-          <p className="font-normal text-neutral-400">
+          <h2 className="text-heading" style={{ color: isDark ? "#ffffff" : "#1a1a1a" }}>Let's Talk</h2>
+          <p className="font-normal" style={{ color: isDark ? "#a1a1a1" : "#666666" }}>
             Whether you're loking to build a new website, improve your existing
             platform, or bring a unique project to life, I'm here to help
           </p>

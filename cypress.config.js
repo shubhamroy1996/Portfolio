@@ -6,6 +6,7 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       return {
+        watchForFileChanges:false,
         video: true,
         screenshotOnRunFailure: true,
         retries: { runMode: 2, openMode: 0 },
