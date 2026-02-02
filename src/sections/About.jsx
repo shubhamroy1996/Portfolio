@@ -2,16 +2,18 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import FrameWorks from '../components/Frameworks'
+import FrameWorks from "../components/Frameworks";
+import { useTheme } from "../contexts/ThemeContext";
 import aboutImage from "../assets/coding-pov5.jpg";
 
 import * as logos from "../assets/logos/index";
 
 const About = () => {
+  const { isDark } = useTheme();
   const grid2Container = useRef();
   return (
-    <section className="c-space section-spacing" id="about">
-      <h2 className="text-heading">About Me</h2>
+    <section className="c-space section-spacing transition-colors duration-300" id="about" style={{ backgroundColor: isDark ? "#030412" : "#f8f8f8", color: isDark ? "#ffffff" : "#1a1a1a" }}>
+      <h2 className="text-heading" style={{ color: isDark ? "#ffffff" : "#1a1a1a" }}>About Me</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
@@ -22,7 +24,7 @@ const About = () => {
           <div className="z-10 flex flex-col gap-6 max-w-3xl">
             {/* Main Heading */}
             <header>
-              <h1 className="headtext text-white">
+              <h1 className="headtext" style={{ color: isDark ? "#ffffff" : "#1a1a1a" }}>
                 Hey, It's me{" "}
                 <span
                   className="font-bold"
@@ -37,7 +39,7 @@ const About = () => {
             </header>
 
             {/* Body Content */}
-            <div className="subtext text-gray-200 space-y-6 leading-relaxed">
+            <div className="subtext space-y-6 leading-relaxed" style={{ color: isDark ? "#d4d4d8" : "#4b5563" }}>
               {/* The Identity Statement */}
               <p className="text-lg">
                 With <strong>5+ years of experience</strong>, I specialize in
@@ -51,7 +53,7 @@ const About = () => {
               {/* The Strategy / Philosophy Block */}
               <div className="flex flex-col gap-4">
                 <div className="group">
-                  <h3 className="text-white font-bold flex items-center gap-2 mb-1">
+                  <h3 className="font-bold flex items-center gap-2 mb-1" style={{ color: isDark ? "#ffffff" : "#1a1a1a" }}>
                     <span className="w-2 h-2 rounded-full bg-cyan-400 group-hover:scale-125 transition-transform" />
                     The Strategy:
                   </h3>
@@ -90,7 +92,7 @@ const About = () => {
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full"
           >
-            <p className="flex items-end text-5xl text-gray-500">
+            <p className="flex items-end text-5xl" style={{ color: isDark ? "#6b7280" : "#9ca3af" }}>
               CODE IS CRAFT
             </p>
             <Card
@@ -148,7 +150,11 @@ const About = () => {
           </figure>
         </div>
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4" id="#about-grid-4" data-testid='#about-grid-4'>
+        <div
+          className="grid-special-color grid-4"
+          id="#about-grid-4"
+          data-testid="#about-grid-4"
+        >
           <div className="flex flex-col items-center justify-center gap-4 size-full">
             <p className="text-center headtext">
               Want to get in touch? Let's build something great together!
@@ -160,7 +166,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
-                data-testid='github_btn'
+                data-testid="github_btn"
               >
                 Github
                 <svg
@@ -203,9 +209,10 @@ const About = () => {
           </div>
         </div>
         {/* Grid 5 */}
+
         <div className="grid-default-color grid-5">
           <div className="z-10 w-full md:w-[60%] lg:w-[50%] space-y-4">
-            <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+            <h3 className="text-xl font-bold tracking-tight flex items-center gap-2" style={{ color: isDark ? "#ffffff" : "#1a1a1a" }}>
               <span className="w-8 h-[2px] bg-cyan-400"></span>
               Tech Stack
             </h3>
@@ -220,19 +227,20 @@ const About = () => {
               {/* Visual Tags for Quick Scanning */}
               <div className="flex flex-wrap gap-2 pt-2">
                 {[
-                  "React",
-                  "TypeScript",
-                  "Node.js",
-                  "GraphQL",
-                  "Redux",
-                  "TanStack",
-                  "mongoDB"
+                  { name: "React", color: "text-cyan-400" },
+                  { name: "JavaScript", color: "text-yellow-400" },
+                  { name: "TypeScript", color: "text-blue-400" },
+                  { name: "Node.js", color: "text-green-400" },
+                  { name: "GraphQL", color: "text-pink-400" },
+                  { name: "Redux", color: "text-purple-400" },
+                  { name: "TanStack", color: "text-red-400" },
+                  { name: "Cypress", color: "text-slate-300" },
                 ].map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-cyan-300 backdrop-blur-md"
+                    className={`px-3 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-cyan-300 backdrop-blur-md ${tech.color}`}
                   >
-                    {tech}
+                    {tech.name}
                   </span>
                 ))}
               </div>

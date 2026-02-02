@@ -2,7 +2,10 @@ import { useState } from "react";
 import Project from "../components/Project";
 import { myProjects } from "../constants";
 import { motion, useMotionValue, useSpring } from "motion/react";
+import { useTheme } from "../contexts/ThemeContext";
+
 const Projects = () => {
+  const { isDark } = useTheme();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { damping: 10, stiffness: 50 });
@@ -15,10 +18,12 @@ const Projects = () => {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative c-space section-spacing"
+      className="relative c-space section-spacing transition-colors duration-300"
+      id="work"
+      style={{ backgroundColor: isDark ? "#030412" : "#f8f8f8", color: isDark ? "#ffffff" : "#1a1a1a" }}
     >
-      <h2 className="text-heading">Highlights from recent projects ↓</h2>
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
+      <h2 className="text-heading" style={{ color: isDark ? "#ffffff" : "#1a1a1a" }}>Highlights from recent projects ↓</h2>
+      <div style={{ background: isDark ? "linear-gradient(to right, transparent, rgba(115, 115, 115, 0.5), transparent)" : "linear-gradient(to right, transparent, rgba(200, 200, 200, 0.5), transparent)" }} className="mt-12 h-[1px] w-full" />
       {myProjects.map((project) => (
         <Project key={project.id} {...project} setPreview={setPreview} />
       ))}

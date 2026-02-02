@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import frontImage from "../assets/socials/frontImage.webp";
 import { FlipWords } from "../components/FlipWords";
+import { useTheme } from "../contexts/ThemeContext";
 
 // BlurText animation component
 const BlurText = ({
@@ -64,58 +65,37 @@ const BlurText = ({
 };
 
 export default function Hero() {
-  const [isDark, setIsDark] = useState(true);
+  const { isDark } = useTheme();
 
   const words = ["Secure", "Modern", "Scalable"];
 
   useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
+    // Apply theme to entire body and all sections
+    if (isDark) {
+      document.body.style.backgroundColor = "#030412";
+      document.body.style.color = "#ffffff";
+    } else {
+      document.body.style.backgroundColor = "#f8f8f8";
+      document.body.style.color = "#1a1a1a";
+    }
+  }, [isDark]);
 
-  const scrollToAbout = useMemo(() => {
+  const handleScrollToAbout = () => {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  },[])
-
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    if (newTheme) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
     }
   };
 
   return (
     <div
-      className="w-[full] text-foreground transition-colors"
+      className="w-[full] text-foreground transition-colors duration-300"
+      id="home"
       style={{
-        backgroundColor: isDark ? "#030412" : "hsl(0 0% 98%)",
-        color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)",
+        backgroundColor: isDark ? "#030412" : "#f8f8f8",
+        color: isDark ? "#ffffff" : "#1a1a1a",
       }}
     >
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6 pointer-events-none">
-        <nav className="flex items-center justify-between max-w-screen-2xl mx-auto pointer-events-auto">
-          <div className="text-10xl" style={{ fontFamily: "cursive" }}></div>
-
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="relative w-16 h-8 rounded-full bg-neutral-200 dark:bg-neutral-800"
-          >
-            <div
-              className={`absolute top-1 left-1 w-6 h-6 rounded-full transition-transform duration-300 bg-black dark:bg-white ${
-                isDark ? "translate-x-8" : "translate-x-0"
-              }`}
-            />
-          </button>
-        </nav>
-      </header>
-
       {/* Hero Section */}
       <main className="relative min-h-screen flex flex-col">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4" data-testid='#name-shubham'>
@@ -178,7 +158,7 @@ export default function Hero() {
 
         <button
           type="button"
-          onClick={scrollToAbout}
+          onClick={handleScrollToAbout}
           className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 transition-colors duration-300 animate-bounce"
           aria-label="Scroll down"
         >
