@@ -91,6 +91,7 @@ export default function Hero() {
 
   return (
     <div
+      id="home"
       className="w-[full] text-foreground transition-colors"
       style={{
         backgroundColor: isDark ? "#030412" : "hsl(0 0% 98%)",
