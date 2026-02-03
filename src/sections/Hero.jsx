@@ -72,22 +72,22 @@ export default function Hero() {
     document.documentElement.classList.add("dark");
   }, []);
 
-  const scrollToAbout = useMemo(() => {
+  const handleScrollToAbout = () => {
     const aboutSection = document.getElementById("about");
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  },[])
+  }
 
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    if (newTheme) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
+  // const toggleTheme = () => {
+  //   const newTheme = !isDark;
+  //   setIsDark(newTheme);
+  //   if (newTheme) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // };
 
   return (
     <div
@@ -103,7 +103,7 @@ export default function Hero() {
         <nav className="flex items-center justify-between max-w-screen-2xl mx-auto pointer-events-auto">
           <div className="text-10xl" style={{ fontFamily: "cursive" }}></div>
 
-          <button
+          {/* <button
             type="button"
             onClick={toggleTheme}
             className="relative w-16 h-8 rounded-full bg-neutral-200 dark:bg-neutral-800"
@@ -113,7 +113,7 @@ export default function Hero() {
                 isDark ? "translate-x-8" : "translate-x-0"
               }`}
             />
-          </button>
+          </button> */}
         </nav>
       </header>
 
@@ -179,7 +179,7 @@ export default function Hero() {
 
         <button
           type="button"
-          onClick={scrollToAbout}
+          onClick={handleScrollToAbout}
           className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 transition-colors duration-300 animate-bounce"
           aria-label="Scroll down"
         >

@@ -1,14 +1,32 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import FrameWorks from '../components/Frameworks'
+import FrameWorks from "../components/Frameworks";
 import aboutImage from "../assets/coding-pov5.jpg";
 
 import * as logos from "../assets/logos/index";
 
 const About = () => {
+  const [currentTime, setcurrentTime] = useState("");
   const grid2Container = useRef();
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setcurrentTime(
+        now.toLocaleTimeString("en-US", {
+          hour12: true,
+          hour: "2-digit",
+          minute: "2-digit",
+        }),
+      );
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
@@ -136,19 +154,66 @@ const About = () => {
           </div>
         </div>
         {/* Grid 3 */}
-        <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
-            <p className="subtext">
-              I'm based in Mars, and open to work worldwide
-            </p>
+        <div className="grid-black-color grid-3 relative overflow-hidden group p-6 rounded-3xl border border-white/5 bg-gradient-to-br from-neutral-900 to-black h-full">
+          {/* 1. Content Layer */}
+          <div className="relative z-20 flex flex-col justify-between h-full w-full md:w-[60%]">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+                </span>
+                <p className="text-xs font-bold uppercase tracking-widest text-cyan-500/80">
+                  Status:{" "}
+                  <span
+                    className="font-bold "
+                    style={{
+                      color: "#C3E41D",
+                      fontFamily: "'Fira Code', monospace",
+                    }}
+                  >
+                    Online
+                  </span>
+                </p>
+              </div>
+
+              <h3 className="text-3xl font-bold text-white tracking-tighter">
+                Time Zone
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed font-medium">
+                Based in <span className="text-white">India (IST)</span>,
+                operating on a{" "}
+                <span className="text-cyan-400">Global Schedule</span> to ensure
+                seamless collaboration worldwide.
+              </p>
+            </div>
+
+            {/* 2. Live Digital Clock */}
+            <div className="pt-8">
+              <p className="text-xs text-gray-500 uppercase font-bold tracking-tighter">
+                Current Local Time
+              </p>
+              <p className="text-4xl font-mono font-bold text-white tabular-nums drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+                {currentTime}
+              </p>
+            </div>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            <Globe />
+          <figure className="absolute -right-20 -top-10 md:-right-10 md:top-0 w-[300px] h-[300px] opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 pointer-events-none">
+            <Globe className="w-full h-full" />
+            {/* Subtle radial glow behind the globe */}
+            <div className="absolute inset-0 bg-cyan-500/10 blur-[100px] rounded-full"></div>
           </figure>
+
+          {/* 4. Glassmorphism Border Overlay */}
+          <div className="absolute inset-0 border border-white/5 rounded-3xl pointer-events-none group-hover:border-cyan-500/20 transition-colors duration-500"></div>
         </div>
+
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4" id="#about-grid-4" data-testid='#about-grid-4'>
+        <div
+          className="grid-special-color grid-4"
+          id="#about-grid-4"
+          data-testid="#about-grid-4"
+        >
           <div className="flex flex-col items-center justify-center gap-4 size-full">
             <p className="text-center headtext">
               Want to get in touch? Let's build something great together!
@@ -160,7 +225,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
-                data-testid='github_btn'
+                data-testid="github_btn"
               >
                 Github
                 <svg
@@ -218,19 +283,21 @@ const About = () => {
               </p>
 
               {/* Visual Tags for Quick Scanning */}
-              <div className="flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap gap-2 pt-1">
                 {[
+                  "Javscript",
                   "React",
                   "TypeScript",
                   "Node.js",
                   "GraphQL",
                   "Redux",
                   "TanStack",
-                  "mongoDB"
+                  "Cypress",
+                  "gitHub Copilot",
                 ].map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-cyan-300 backdrop-blur-md"
+                    className="px-2 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-full text-cyan-300 backdrop-blur-md"
                   >
                     {tech}
                   </span>
