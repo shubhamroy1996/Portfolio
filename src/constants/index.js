@@ -249,9 +249,9 @@ export const experiences = [
     job: "Insurance Domain",
     date: "2019-2022",
     contents: [
-      "✅ Built end-to-end test automation for a React web app using CodeceptJS and TypeScript, covering complex insurance workflows (quoting, claims).",
-      "✅ Authored 300+ BDD/TDD Gherkin scenarios, improving requirement traceability and business–engineering collaboration",
-      "✅ Led automation framework migration to TypeScript, introducing type-safe interfaces adopted by 15+ cross-functional teams",
+      "✅ Built e2e test automation for a React web app using Gherkin and Javascript, covering complex insurance workflows (quoting, claims).",
+      "✅ Authored 300+ BDD/TDD Gherkin scenarios, improving requirement traceability and business–engineering collaboration.",
+      "✅ Led automation framework migration to TypeScript, introducing type-safe interfaces adopted by 15+ cross-functional teams.",
       "✅ Developed scalable RESTful APIs with Node.js and Express to support high-volume data exchange between underwriting engines and UI."
     ],
   },
@@ -260,11 +260,11 @@ export const experiences = [
     job: "Demand & Supply Chain Domain",
     date: "2022-2025",
     contents: [
-      "✅Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "✅ Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
+      "✅ Prioritized and resolved product defects to improve system stability and reliability.",
+      "✅ Designed and implemented enhancements to offset navigation, significantly reducing processing latency and improving user experience.",
+      "✅ Delivered new product features in alignment with business and technical requirements.",
+      "✅ Enhanced dashboard functionality to enable seamless data visualization and optimized data loading performance.",
+      "✅ Enhanced a demand forecasting system leveraging SKU-level analysis to support data-driven planning and decision-making.",
     ],
   },
   {
@@ -272,10 +272,10 @@ export const experiences = [
     job: "Audit-Tax Domain",
     date: "2025-Present",
     contents: [
-      "✅ Engineered core features for a large-scale Audit Management platform", 
-      "✅ Developed TypeScript modules to fetch and render 3-5 years of historical audit data via REST APIs.",
-      "✅ Deployed AI-driven validation tools that identify reporting errors and omissions in real-time", 
-      "✅ Utilize MongoDB for data persistence and Datadog to monitor feature performance and reliability.",
+      "✅ Engineered core features using a micro-frontend (MFE) architecture for large-scale B2B data products.", 
+      "✅ Developed TypeScript modules to efficiently fetch, process, and render historical audit data for corporate tax departments.",
+      "✅ Collaborated with cross-functional teams to build and validate LLM-powered tools that detect audit anomalies and omissions in real time.", 
+      "✅ Optimized and enhanced product APIs to handle high-volume requests, reducing latency through caching strategies and gRPC integration.",
     ],
   },
 ];
@@ -283,25 +283,25 @@ export const reviews = [
   {
     name: "Ebony",
     username: "@ebony",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    body: "The improvements delivered significantly reduced delays in our workflows. Navigation is smoother, dashboards load faster, and the system feels far more reliable.",
     img: "https://robohash.org/jack",
   },
   {
     name: "Sunanda",
     username: "@Sunanda",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
+    body: "Complex supply chain requirements were translated into practical, high-quality features that directly supported our demand planning and forecasting needs.",
     img: "https://robohash.org/jill",
   },
   {
     name: "K.Koli",
     username: "@koli.k",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    body: "Performance optimizations made a noticeable difference. Data-heavy operations are faster and more responsive, even during peak usage.",
     img: "https://robohash.org/john",
   },
   {
     name: "T.k.",
     username: "@t.kali",
-    body: "This is hands down the best thing I've experienced. Highly recommend!",
+    body: "The micro-frontend features were delivered with great attention to scalability and usability, helping our B2B platform evolve without disruption.",
     img: "https://robohash.org/alice",
   },
   {
@@ -313,19 +313,19 @@ export const reviews = [
   {
     name: "Jonnis",
     username: "@Jonnis",
-    body: "This exceeded all my expectations. Absolutely stunning!",
+    body: "Audit and historical tax data is now easier to access and understand, which has greatly improved our team’s efficiency and decision-making",
     img: "https://robohash.org/charlie",
   },
   {
     name: "Dave",
     username: "@dave",
-    body: "Simply breathtaking. The best decision I've made in a while.",
+    body: "API enhancements and caching improvements led to faster response times and better reliability under high request volumes.",
     img: "https://robohash.org/dave",
   },
   {
     name: "Eve",
     username: "@eve",
-    body: "So glad I found this. It has changed the game for me.",
+    body: "A strong engineering partner who understands business impact and consistently delivers solutions that improve performance and user experience.",
     img: "https://robohash.org/eve",
   },
 ];
