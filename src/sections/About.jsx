@@ -58,7 +58,7 @@ const About = () => {
             <div className="subtext text-gray-200 space-y-6 leading-relaxed">
               {/* The Identity Statement */}
               <p className="text-lg">
-                With <strong>5+ years of experience</strong>, I specialize in
+                With <strong>6+ years of experience</strong>, I specialize in
                 building scalable, high-performance web applications within the{" "}
                 <strong>React ecosystem</strong>. I leverage tools like{" "}
                 <strong>Redux and TanStack</strong> to optimize data flow,
