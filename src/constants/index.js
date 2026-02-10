@@ -1,7 +1,6 @@
-import * as Icons from '../assets/socials/index'
-import * as Project from "../assets/projects/index"
-import * as Logos from '../assets/logos/index'
-
+import * as Icons from "../assets/socials/index";
+import * as Project from "../assets/projects/index";
+import * as Logos from "../assets/logos/index";
 
 export const myProjects = [
   {
@@ -25,17 +24,17 @@ export const myProjects = [
       {
         id: 2,
         name: "Redux",
-        path: Logos.redux
+        path: Logos.redux,
       },
       {
         id: 3,
         name: "TailwindCSS",
-        path: Logos.tailwindcss
+        path: Logos.tailwindcss,
       },
       {
         id: 4,
         name: "Vite",
-        path: Logos.vitejs
+        path: Logos.vitejs,
       },
     ],
   },
@@ -48,7 +47,7 @@ export const myProjects = [
       "Integrates Gemini AI to transform user preferences into detailed travel plans in seconds.",
       "Developed with TypeScript to ensure reliable data flow across complex dashboard widgets and user states.",
     ],
-    href: "",
+    href: "https://travel-agency-dashboard-delta.vercel.app/",
     logo: "",
     image: Project.tourvisto,
     tags: [
@@ -60,94 +59,92 @@ export const myProjects = [
       {
         id: 2,
         name: "React",
-        path: Logos.react
+        path: Logos.react,
       },
       {
         id: 3,
         name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        path: Logos.vitejs,
       },
       {
         id: 4,
         name: "TailwindCSS",
-        path: Logos.tailwindcss
+        path: Logos.tailwindcss,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Company Directory",
+    description:
+      "A scalable React + TypeScript web application for efficiently browsing, searching, and filtering large company datasets with high performance and a smooth user experience.",
+    subDescription: [
+      "Implemented advanced filtering with seamless switching between table and card views to instantly refine large datasets without UI lag",
+      "Uses offset-based pagination to handle and navigate large volumes of company records efficiently",
+    ],
+    href: "https://companies-directory-roan.vercel.app/",
+    logo: "",
+    image: Project.companyDirectory,
+    tags: [
+      {
+        id: 1,
+        name: "Typescript",
+        path: Logos.typescript,
+      },
+      {
+        id: 2,
+        name: "React",
+        path: Logos.react,
+      },
+      {
+        id: 3,
+        name: "Vite",
+        path: Logos.vitejs,
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: Logos.tailwindcss,
       },
     ],
   },
   // {
-  //   id: 3,
-  //   title: "Blazor Web App",
+  //   id: 4,
+  //   title: "Coming soon...",
   //   description:
-  //     "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
+  //     "-----------------------------------------------.",
   //   subDescription: [
-  //     "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-  //     "Implemented API interactions using .NET Core for a robust backend.",
-  //     "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-  //     "Integrated SQLite for efficient client-side database storage.",
+  //     "----------------------------------",
+  //     // "Developed a physics engine with collision detection and particle effects.",
+  //     // "Implemented a scripting system for easy game customization.",
+  //     // "Optimized performance with multi-threading and efficient memory management.",
   //   ],
   //   href: "",
   //   logo: "",
-  //   image: "/assets/projects/blazor-app.jpg",
+  //   image: "/assets/projects/game-engine.jpg",
   //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "Blazor",
-  //       path: "/assets/logos/blazor.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: ".NET Core",
-  //       path: "/assets/logos/dotnetcore.svg",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "SQLite",
-  //       path: "/assets/logos/sqlite.svg",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "TailwindCSS",
-  //       path: "/assets/logos/tailwindcss.svg",
-  //     },
+  //   //   {
+  //   //     id: 1,
+  //   //     name: "C++",
+  //   //     path: "/assets/logos/cplusplus.svg",
+  //   //   },
+  //   //   {
+  //   //     id: 2,
+  //   //     name: "C#",
+  //   //     path: "/assets/logos/csharp.svg",
+  //   //   },
+  //   //   {
+  //   //     id: 3,
+  //   //     name: "Git",
+  //   //     path: "/assets/logos/git.svg",
+  //   //   },
+  //   //   {
+  //   //     id: 4,
+  //   //     name: "Microsoft",
+  //   //     path: "/assets/logos/microsoft.svg",
+  //   //   },
   //   ],
   // },
-  {
-    id: 4,
-    title: "Coming soon...",
-    description:
-      "-----------------------------------------------.",
-    subDescription: [
-      "----------------------------------",
-      // "Developed a physics engine with collision detection and particle effects.",
-      // "Implemented a scripting system for easy game customization.",
-      // "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
-    tags: [
-    //   {
-    //     id: 1,
-    //     name: "C++",
-    //     path: "/assets/logos/cplusplus.svg",
-    //   },
-    //   {
-    //     id: 2,
-    //     name: "C#",
-    //     path: "/assets/logos/csharp.svg",
-    //   },
-    //   {
-    //     id: 3,
-    //     name: "Git",
-    //     path: "/assets/logos/git.svg",
-    //   },
-    //   {
-    //     id: 4,
-    //     name: "Microsoft",
-    //     path: "/assets/logos/microsoft.svg",
-    //   },
-    ],
-  },
   // {
   //   id: 5,
   //   title: "WordPress Custom Theme",
@@ -224,7 +221,6 @@ export const myProjects = [
   // },
 ];
 
-
 export const mySocials = [
   {
     name: "WhatsApp",
@@ -239,7 +235,7 @@ export const mySocials = [
   {
     name: "Gmail",
     href: import.meta.env.VITE_EMAIL_ID,
-    icon: Icons.gmail
+    icon: Icons.gmail,
   },
 ];
 
@@ -252,7 +248,7 @@ export const experiences = [
       "✅ Built e2e test automation for a React web app using Gherkin and Javascript, covering complex insurance workflows (quoting, claims).",
       "✅ Authored 300+ BDD/TDD Gherkin scenarios, improving requirement traceability and business–engineering collaboration.",
       "✅ Led automation framework migration to TypeScript, introducing type-safe interfaces adopted by 15+ cross-functional teams.",
-      "✅ Developed scalable RESTful APIs with Node.js and Express to support high-volume data exchange between underwriting engines and UI."
+      "✅ Developed scalable RESTful APIs with Node.js and Express to support high-volume data exchange between underwriting engines and UI.",
     ],
   },
   {
@@ -272,9 +268,9 @@ export const experiences = [
     job: "Audit-Tax Domain",
     date: "2025-Present",
     contents: [
-      "✅ Engineered core features using a micro-frontend (MFE) architecture for large-scale B2B data products.", 
+      "✅ Engineered core features using a micro-frontend (MFE) architecture for large-scale B2B data products.",
       "✅ Developed TypeScript modules to efficiently fetch, process, and render historical audit data for corporate tax departments.",
-      "✅ Collaborated with cross-functional teams to build and validate LLM-powered tools that detect audit anomalies and omissions in real time.", 
+      "✅ Collaborated with cross-functional teams to build and validate LLM-powered tools that detect audit anomalies and omissions in real time.",
       "✅ Optimized and enhanced product APIs to handle high-volume requests, reducing latency through caching strategies and gRPC integration.",
     ],
   },
